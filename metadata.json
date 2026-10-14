@@ -1,0 +1,6 @@
+{
+  "name": "SGI Acceso - Control Institucional y Trazabilidad",
+  "description": "Sistema de gestión fiduciaria de accesos, control de portería con QR dinámico, trazabilidad de equipos, gestión de ambientes y control de asistencia.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
