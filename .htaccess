@@ -1,0 +1,25 @@
+# ==============================================================================
+# SGI ACCESO - CONFIGURACIÓN APACHE PARA XAMPP
+# ==============================================================================
+
+DirectoryIndex index.php index.html
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    # Permitir acceso directo a archivos existentes
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
+</IfModule>
+
+<IfModule mod_headers.c>
+    # Cabeceras de seguridad y CORS para APIs
+    Header set Access-Control-Allow-Origin "*"
+    Header set Access-Control-Allow-Methods "GET, POST, PATCH, PUT, DELETE, OPTIONS"
+    Header set Access-Control-Allow-Headers "Content-Type, Authorization, apikey, Prefer"
+</IfModule>
+
+# Desactivar listado de directorios
+Options -Indexes
